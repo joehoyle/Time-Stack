@@ -8,7 +8,6 @@
 		<script type="text/javascript" src="js/jquery.tmpl.js"></script>
 		<script type="text/javascript" src="js/knockout.js"></script>
 		<script type="text/javascript" src="js/spin.js"></script>
-		<script type="text/javascript" src="js/mapping.js"></script>
 		<script type="text/javascript" src="js/models.js"></script>
 		<script type="text/javascript" src="js/controllers.js"></script>
 		<script type="text/javascript" src="js/js.js"></script>
