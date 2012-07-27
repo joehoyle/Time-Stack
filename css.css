@@ -5,17 +5,24 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 h1 { font-size: 14px; color: rgba(255,255,255,.7) }
 
-ul.stack { background: #f7f7f7; border-radius: 5px; border: 2px solid lightblue; box-shadow: 0 0 10px rgba(0,0,0,.2); margin: 0 0 30px; padding: 5px; overflow: hidden; }
+ul.stack { background: #f7f7f7; border-radius: 5px; border: 3px solid lightblue; box-shadow: 0 0 10px rgba(0,0,0,.2); margin: 0 0 30px; padding: 5px; overflow: hidden; }
 ul.stack li h2 { margin: 0; font-size: 13px; float: left; color: #444; }
 ul.stack li .memory-usage { float: right; font-size: 11px; line-height: 16px; display: block; width: 100px; color: #444; }
 ul.stack li .query_num { float: right; font-size: 11px; line-height: 16px; display: block; width: 120px; color: #888; font-weight: bold; }
 ul.stack li .duration { float: right; font-size: 11px; color: #333; font-weight: bold; width: 60px; }
+
+.user-2 ul.stack { border-color: blue; }
+.user-3 ul.stack { border-color: red; }
+.user-4 ul.stack { border-color: green; }
 
 ul.stack li ul { margin-left: 10px; }
 
 li.HM_Time_Stack_Operation { padding: 7px 3px; background: rgba(100,100,100,.1); clear: both; overflow: hidden; border: 1px solid #ccc; }
 li.HM_Time_Stack_Event { border-bottom: 1px solid #ccc; clear: both; padding: 3px 0; overflow: hidden; }
 
+.query-table { clear; both; }
+.query-table table { width: 100%; background: #e3e3e3; border: 1px solid #444; font-size: 11px; }
+.query-table table td { border-top: 1px solid #fff; }
 
 .button { background: -webkit-linear-gradient(#fff, #ddd); border: 1px solid #f7f7f7; border-radius: 12px; padding: 4px 8px; }
 .button:active { opacity: .6 }
