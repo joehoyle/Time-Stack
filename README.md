@@ -31,7 +31,7 @@ You need to install the TimeStack Plugin (https://github.com/joehoyle/Time-Stack
 
 ## How do I track operations in my code?
 
-This is probably the most important part. TimeStack is really for you own custom code, not 3rd party code. TimeStack has 2 tracking metrics: `operations` and `events`. An operation encapsulates code, an event just sets a time stamp for that point in teh code. In the above screenshots `wp_head` and `template_redirect` are events. We use actions so they can potentially be left in teh code when not runign teh TimeStack Plugin.
+This is probably the most important part. TimeStack is really for you own custom code, not 3rd party code. TimeStack has 2 tracking metrics: `operations` and `events`. An operation encapsulates code, an event just sets a time stamp for that point in the code. In the above screenshots `wp_head` and `template_redirect` are events. We use actions so they can potentially be left in the code when not running the TimeStack Plugin.
 
 To track an operation:
 
