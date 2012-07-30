@@ -27,4 +27,4 @@ I also created a demo screencast with my awful voice (apologies) :) https://vime
 
 ## How do I get this to work?
 
-You need to install the hm-dev (https://github.com/humanmade/hm-dev) plugin on your WordPress site, and be running a persistant object cache. If you don't know what that is, TimeStack may not be the tool for you ;) Kidding, but I don;t have time to write all those instructions yet.
+You need to install the TimeStack Plugin (https://github.com/joehoyle/Time-Stack-Plugin) plugin on your WordPress site, and be running a persistant object cache. If you don't know what that is, TimeStack may not be the tool for you ;) Kidding, but I don;t have time to write all those instructions yet.
