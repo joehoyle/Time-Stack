@@ -28,3 +28,25 @@ I also created a demo screencast with my awful voice (apologies) :) https://vime
 ## How do I get this to work?
 
 You need to install the TimeStack Plugin (https://github.com/joehoyle/Time-Stack-Plugin) plugin on your WordPress site, and be running a persistant object cache. If you don't know what that is, TimeStack may not be the tool for you ;) Kidding, but I don;t have time to write all those instructions yet.
+
+## How do I track operations in my code?
+
+This is probably the most important part. TimeStack is really for you own custom code, not 3rd party code. TimeStack has 2 tracking metrics: `operations` and `events`. An operation encapsulates code, an event just sets a time stamp for that point in teh code. In the above screenshots `wp_head` and `template_redirect` are events. We use actions so they can potentially be left in teh code when not runign teh TimeStack Plugin.
+
+To track an operation:
+
+```PHP
+do_action( 'start_operation', 'Call Twitter' );
+
+$twitter_api->get_results( 's=foo' );
+
+do_action( 'end_operation', 'Call Twitter' );
+```
+
+Operations are multilevel so tracking `operations` withing other `operations` is fine.
+
+To track an event:
+
+```PHP 
+do_action( 'add_event', 'Below Footer' );
+```
