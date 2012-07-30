@@ -6,7 +6,7 @@ It's a tool for profiling WordPress development by time/mysql queries/memory usa
 
 TimeStack is made for WordPress specifically, this means auto hooking in to measure instances of `WP_Query`, `WP_HTTP`, `plugins_loaded` etc. It's not as advanced as a real PHP profiler, but it's "native" for WordPress.
 
-## Why use this over the Debug Bar Profileing tab?
+## Why use this over the Debug Bar Profiling tab?
 
 There are two main reasons this is better (objectivly of course ;) ) than the Profiling tab.
 
