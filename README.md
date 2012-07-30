@@ -15,8 +15,10 @@ There are two main reasons this is better (objectivly of course ;) ) than the Pr
 
 ## Screen Shots
 
-!()[https://dl.dropbox.com/u/238502/Captured/tuUpR.png]
+![](https://dl.dropbox.com/u/238502/Captured/tuUpR.png)
 
-!()[https://dl.dropbox.com/u/238502/Captured/X4JMp.png]
+![](https://dl.dropbox.com/u/238502/Captured/X4JMp.png)
 
-!()[https://dl.dropbox.com/u/238502/Captured/2VR8Y.png]
+![](https://dl.dropbox.com/u/238502/Captured/2VR8Y.png)
+
+I also created a demo screencast with my awful voice (apologies) :) https://vimeo.com/46631839
