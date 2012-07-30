@@ -43,7 +43,7 @@ $twitter_api->get_results( 's=foo' );
 do_action( 'end_operation', 'Call Twitter' );
 ```
 
-Operations are multilevel so tracking `operations` withing other `operations` is fine.
+Operations are multilevel so tracking `operations` within other `operations` is fine.
 
 To track an event:
 
