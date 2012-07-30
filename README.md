@@ -1,3 +1,5 @@
+Warning, Alpha version!!
+
 ## What is WordPress TimeStack?
 
 It's a tool for profiling WordPress development by time/mysql queries/memory usage. It supports multilevel operation based tracking of such metrics.
