@@ -24,3 +24,7 @@ There are two main reasons this is better (objectivly of course ;) ) than the Pr
 ![](https://dl.dropbox.com/u/238502/Captured/2VR8Y.png)
 
 I also created a demo screencast with my awful voice (apologies) :) https://vimeo.com/46631839
+
+## How do I get this to work?
+
+You need to install the hm-dev (https://github.com/humanmade/hm-dev) plugin on your WordPress site, and be running a persistant object cache. If you don't know what that is, TimeStack may not be the tool for you ;) Kidding, but I don;t have time to write all those instructions yet.
