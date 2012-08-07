@@ -21,7 +21,7 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="" style="padding: 0 15px 0 15px">
-					<a class="brand" style="display: inline-block; width: 14%" href="#">WordPress TimeStack</a>
+					<a class="brand" style="display: inline-block; width: 14%; overflow: hidden; white-space: pre; text-overflow: ellipsis;" href="#">WordPress TimeStack</a>
 					
 					<form class="navbar-search pull-left" data-bind="submit: RequestsController.start">
 						<input type="url" class="search-query span4" data-bind="value: url" placeholder="Enter URL">
