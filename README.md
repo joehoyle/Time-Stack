@@ -10,9 +10,9 @@ TimeStack is made for WordPress specifically, this means auto hooking in to meas
 
 ## Why use this over the Debug Bar Profiling tab?
 
-There are two main reasons this is better (objectivly of course ;) ) than the Profiling tab.
+There are two main reasons this is better (objectively of course ;) ) than the Profiling tab.
 
-1. It is a seperate web app which means you get to see _all_ requests, not just pages you can access the Admin Bar (requests that cause redirects etc.).
+1. It is a separate web app which means you get to see _all_ requests, not just pages you can access the Admin Bar (requests that cause redirects etc.).
 2. TimeStack is multilevel, you have operations and events within other events. The Debug Bar gives you a single level rundown, TimeStack let's you drill down through operations.
 
 ## Screen Shots
