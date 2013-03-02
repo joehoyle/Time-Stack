@@ -17,11 +17,10 @@ There are two main reasons this is better (objectively of course ;) ) than the P
 
 ## Screen Shots
 
-![](https://dl.dropbox.com/u/238502/Captured/tuUpR.png)
+![](https://dl.dropbox.com/1/view/xdfvmhmu10t9smb/Captured/KFFPF.png)
 
-![](https://dl.dropbox.com/u/238502/Captured/X4JMp.png)
+![](https://dl.dropbox.com/1/view/xdfvmhmu10t9smb/Captured/KFFPF.png)
 
-![](https://dl.dropbox.com/u/238502/Captured/2VR8Y.png)
 
 I also created a demo screencast with my awful voice (apologies) :) https://vimeo.com/46631839
 
