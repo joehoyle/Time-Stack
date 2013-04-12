@@ -26,7 +26,21 @@ I also created a demo screencast with my awful voice (apologies) :) https://vime
 
 ## How do I get this to work?
 
-You need to install the TimeStack Plugin (https://github.com/joehoyle/Time-Stack-Plugin) plugin on your WordPress site, and be running a persistant object cache. If you don't know what that is, TimeStack may not be the tool for you ;) Kidding, but I don;t have time to write all those instructions yet.
+You need to install the TimeStack Plugin (https://github.com/joehoyle/Time-Stack-Plugin) plugin on your WordPress site, and be running a persistent object cache. 
+
+**Setting up a persistent object cache with MAMP**
+
+If you haven't already, read the [codex page on object caching](http://codex.wordpress.org/Class_Reference/WP_Object_Cache) to get an idea of what this is and what your options are.
+
+If you don't want to get involved with memcached, which is fiddly to set up with MAMP, your quickest option is probably to download the [APC Object Cache plugin](http://wordpress.org/extend/plugins/apc/) and follow its instructions.
+
+You'll need make sure you've selected 'APC' as your cache extension in MAMP Preferences > PHP.
+
+This done, you need to add the following line to`wp-config.php`, somwhere above "That's all, stop editing!" :
+
+```PHP
+define( 'WP_CACHE', true );
+```
 
 ## How do I track operations in my code?
 
