@@ -17,9 +17,8 @@ There are two main reasons this is better (objectively of course ;) ) than the P
 
 ## Screen Shots
 
-![](https://dl.dropbox.com/1/view/xdfvmhmu10t9smb/Captured/KFFPF.png)
+![](https://s3.amazonaws.com/joehoyle-captured/cFrCt.png)
 
-![](https://dl.dropbox.com/1/view/xdfvmhmu10t9smb/Captured/KFFPF.png)
 
 
 I also created a demo screencast with my awful voice (apologies) :) https://vimeo.com/46631839
