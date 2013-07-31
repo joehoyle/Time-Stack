@@ -1,4 +1,4 @@
-<ul class="nav nav-pills nav-stacked" style="margin-bottom: 0" data-bind="foreach: children">
+<ul class="nav nav-pills stack nav-stacked" style="margin-bottom: 0" data-bind="foreach: children">
 
 	<!-- ko if: type == 'HM_Time_Stack_Operation' -->
 		<li data-bind="css: { active: RequestsController.selectedOperation() == $data }">
@@ -6,7 +6,7 @@
 
 				<span style="width: 100px; color: #999" class="">+ <i data-bind="text: time"></i>ms</span>
 
-				<strong data-bind="text: label"></strong>
+				<strong  style="display: inline-block; overflow: hidden; text-overflow: ellipsis; width: 78%; white-space: nowrap;" data-bind="text: label"></strong>
 
 				<!-- ko if: children().length > 0 -->
 					<strong>&crarr;</strong>
@@ -33,8 +33,8 @@
 
 	<!-- ko if: type == 'HM_Time_Stack_Event' -->
 		<li class="event">
-			<span style="width: 100px; color: #999;" class="">+ <i data-bind="text: time"></i>ms</span>
-			&rarr; <span data-bind="text: label"></span>
+			<span style="width: 100px; color: #999; " class="">+ <i data-bind="text: time"></i>ms</span>
+			&rarr; <span style="display: inline-block; overflow: hidden; text-overflow: ellipsis; width: 78%; white-space: nowrap;" data-bind="text: label"></span>
 
 		</li>
 	<!-- /ko -->

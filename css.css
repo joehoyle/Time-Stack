@@ -7,6 +7,7 @@ h1 { font-size: 14px; color: rgba(255,255,255,.7) }
 
 ul.stack { background: #f7f7f7; border-radius: 5px; border: 3px solid lightblue; box-shadow: 0 0 10px rgba(0,0,0,.2); margin: 0 0 30px; padding: 5px; overflow: hidden; }
 ul.stack li h2 { margin: 0; font-size: 13px; float: left; color: #444; }
+ul.stack li .operation-name { display: inline-block; overflow: hidden; text-overflow: ellipsis; width: 78%; text-wrap: nowrap;  }
 ul.stack li .memory-usage { float: right; font-size: 11px; line-height: 16px; display: block; width: 100px; color: #444; }
 ul.stack li .query_num { float: right; font-size: 11px; line-height: 16px; display: block; width: 120px; color: #888; font-weight: bold; }
 ul.stack li .duration { float: right; font-size: 11px; color: #333; font-weight: bold; width: 60px; }

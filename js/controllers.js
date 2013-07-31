@@ -5,35 +5,7 @@ var viewModel = {
 }
 
 var lastAjaxRequestDidFinish = false;
-
-
-var getTimeStack = function( callback ) {
-
-	lastAjaxRequestDidFinish = false;
-
-	try {
-		var req = jQuery.getJSON( viewModel.url() + '?action=hm_get_stacks&jsoncallback=?', callback );
-	} catch( e ) {
-
-		setTimeout( function() {
-			getTimeStack( callback );
-		}, 1000 );	
-	}
-
-	req.error( function(err) { 
-
-		setTimeout( function() {
-			getTimeStack( callback );
-		}, 1000 );
-	} );
-
-	setTimeout( function() {
-		if ( lastAjaxRequestDidFinish == false ) {
-			req.abort();
-		}
-	}, 5000 );
-
-}
+var loadedTime = new Date().getTime();
 
 var RequestsController = new function() {
 
@@ -48,7 +20,81 @@ var RequestsController = new function() {
 		self.selectedOperation( self.selectedRequest() );
 	} );
 
+	self.requestsChart = ko.dependentObservable( function() {
+
+		var data = [];
+
+		ko.utils.arrayForEach( self.requests(), function( request ) {
+			
+			data.push( { name: 'awd', value: request.duration } );
+		});
+
+		if ( data.length >= 40 ) {
+			data = data.slice( 0, 39 );
+		} else {
+			while( data.length < 40 )
+				data.push( { name: 'awd', value: 0 } );
+		}
+		data.reverse();
+		
+		return data;
+	} );
+
+
+	self.averageResponseTime = ko.dependentObservable( function() {
+
+		var total_time = 0;
+		var total_count = 0;
+
+		ko.utils.arrayForEach( self.requests(), function( request ) {
+			
+			total_time += request.duration;
+			total_count++;
+		});
+
+		return Math.round( total_time / total_count );
+	}, self );
+
+	self.averageDBTime = ko.dependentObservable( function() {
+
+		var total_time = 0;
+		var total_count = 0;
+
+		ko.utils.arrayForEach( self.requests(), function( request ) {
+			
+			total_time += request.queryTime();
+			total_count++;
+		});
+
+		return Math.round( total_time / total_count );
+	}, self );
+
+	self.averageDBCount = ko.dependentObservable( function() {
+
+		var total_time = 0;
+		var total_count = 0;
+
+		ko.utils.arrayForEach( self.requests(), function( request ) {
+			
+			total_time += request.queries().length;
+			total_count++;
+		});
+
+		return Math.round( total_time / total_count );
+	}, self );
+
+	self.requestRate = ko.dependentObservable( function() {
+		var timeTaken  = ( new Date().getTime() - loadedTime ) / 1000;
+
+		return Math.round( self.requests().length / timeTaken ) * 60;
+	}, self );
+
 	self.start = function() {
+
+		if ( ! viewModel.url() ) {
+			DetailsController.show();
+			return;
+		}
 		localStorage.setItem( 'url', viewModel.url() );
 		getTimeStack( function( data ) {
 			lastAjaxRequestDidFinish = true;
@@ -76,6 +122,22 @@ var RequestsController = new function() {
 		self.requests( [] );
 		self.selectedRequest( null )
 		self.selectedOperation( null )
+	}
+}
+
+var DetailsController = new function() {
+
+	this.url = ko.observable('');
+	var self = this;
+
+	this.show = function() {
+		jQuery( '#details-modal' ).modal( { backdrop: true, show: true } );
+	}
+
+	this.setDetails = function() {
+		viewModel.url( self.url() );
+		debugger;
+		jQuery( '#details-modal' ).modal('hide');
 	}
 
 }

@@ -5,6 +5,10 @@ var Request = function( jsonData ) {
 
 	self.url = jsonData.url;
 	self.date = jsonData.date;
+	self.fullurl = jsonData.full_url;
+	self.requestType = jsonData.request_type;
+	self.getVars = jsonData.get_vars;
+
 	
 	if ( typeof( jsonData.user ) != 'undefined' )
 		self.user( jsonData.user )
@@ -22,6 +26,7 @@ var Operation = function( jsonData ) {
 	
 	var self = this;
 
+	console.log( jsonData );
 	self.children 	= ko.observableArray([]);
 	self.duration 	= 0.0
 	self.label		= ''
@@ -59,6 +64,12 @@ var Operation = function( jsonData ) {
 	self.importJSON = function( jsonData ) {
 	
 		// primatives
+		if ( ! jsonData ) {
+
+			console.log('not valid');
+			return;
+			
+		}
 		self.duration = Math.round((jsonData.duration * 1000)*Math.pow(10,2))/Math.pow(10,2);
 		self.open( jsonData.is_open );
 		self.label = jsonData.label;
@@ -79,7 +90,7 @@ var Operation = function( jsonData ) {
 		}
 
 		if ( typeof( jsonData.time ) != 'undefined' ) {
-			self.time = jsonData.time * 1000;
+			self.time = Math.round( jsonData.time * 1000 );
 		}
 
 		if ( typeof( jsonData.children ) == 'object' ) {
