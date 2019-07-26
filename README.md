@@ -35,7 +35,7 @@ If you don't want to get involved with memcached, which is fiddly to set up with
 
 You'll need make sure you've selected 'APC' as your cache extension in MAMP Preferences > PHP.
 
-This done, you need to add the following line to`wp-config.php`, somwhere above "That's all, stop editing!" :
+This done, you need to add the following line to`wp-config.php`, somewhere above "That's all, stop editing!" :
 
 ```PHP
 define( 'WP_CACHE', true );
